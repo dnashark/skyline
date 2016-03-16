@@ -12,7 +12,10 @@ public class Game {
 	private Map<Role, Integer> market;
 	private Map<Role, Integer> zonedLocations;
 	private Map<Role, Integer> unzonedLocations;
-	
+
+	private int initiatorIndex;
+	private Segment currentSegment;
+
 	public Game() {
 		this.players = new ArrayList<>();
 		this.deck = new Deck();
@@ -50,5 +53,21 @@ public class Game {
 
 	public Map<Role, Integer> getUnzonedLocations() {
 		return unzonedLocations;
+	}
+
+	public int getInitiatorIndex() {
+		return initiatorIndex;
+	}
+
+	public void setInitiatorIndex(int initiatorIndex) {
+		this.initiatorIndex = initiatorIndex;
+	}
+
+	public Segment getCurrentSegment() {
+		return this.currentSegment;
+	}
+
+	public void setCurrentSegment(Segment currentSegment) {
+		this.currentSegment = currentSegment;
 	}
 }

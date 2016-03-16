@@ -28,6 +28,8 @@ public class Deck {
 		return this.cards.remove(this.cards.size() - 1);
 	}
 	
+	public int size() { return this.cards.size(); }
+	
 	private void swap(int i, int j) {
 		DeckCard temp = this.cards.get(i);
 		this.cards.set(i, this.cards.get(j));
